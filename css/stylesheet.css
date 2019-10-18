@@ -92,6 +92,8 @@ font-family: 'Open Sans', sans-serif, Arial;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    margin: 0;
+    line-height: 0;
     left: 15px;
     font-size: 50px;
     text-align: center;
