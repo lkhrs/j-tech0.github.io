@@ -1,0 +1,174 @@
+/*     _       _           _
+      | |     | |         | |
+  __ _| | ___ | |__   __ _| |
+ / _` | |/ _ \| '_ \ / _` | |
+| (_| | | (_) | |_) | (_| | |
+ \__, |_|\___/|_.__/ \__,_|_|
+  __/ |                      
+ |___/  
+*/
+*{
+    transition: 0.3s;
+font-family: 'Open Sans', sans-serif, Arial;
+}
+ 
+/*
+     _     _                                   
+    (_)   | |                                  
+ ___ _  __| | ___   _ __ ___   ___ _ __  _   _ 
+/ __| |/ _` |/ _ \ | '_ ` _ \ / _ \ '_ \| | | |
+\__ \ | (_| |  __/ | | | | | |  __/ | | | |_| |
+|___/_|\__,_|\___| |_| |_| |_|\___|_| |_|\__,_|
+*/
+
+.sidenav { /*side navigation menu style*/
+    height: 100%; 
+    max-width: 100%;
+    width: 0px;
+    /*transform: translateX(-500px);*/
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    padding-top: 70px;
+    background: rgba(17, 81, 114, 0.54);
+    overflow-x: hidden;
+    box-shadow: 0 0 10px black;
+
+}
+.sidenav a { /*style for links in sidenav*/
+    padding: 10px 8px 10px 32px;
+    text-decoration: none;
+    height: 30px;
+    font-size: 25px;
+    color: #FFF;
+    display: block;
+    text-shadow: 0 0 10px black;
+    white-space: nowrap;
+}
+.sidenav a:hover { /*change link style on hover*/
+    color: #ffffff;
+    text-shadow: 0 0 10px white;
+}
+.sidenav .current {
+    background-color: rgba(206, 206, 206, 0.81);
+}
+
+
+/*
+ _                _                
+| |              | |               
+| |_ ___  _ __   | |__   __ _ _ __ 
+| __/ _ \| '_ \  | '_ \ / _` | '__|
+| || (_) | |_) | | |_) | (_| | |   
+ \__\___/| .__/  |_.__/ \__,_|_|   
+         | |                       
+         |_|                       
+*/
+.topbar { /*top bar style*/
+    overflow: hidden;
+    position: fixed;
+    background-color: #115172;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55px;
+    z-index: 2;
+    box-shadow: 0 0 10px black;
+}
+.topbar img{ /*topbar logo handling*/
+    padding: 2px 30px;
+    filter: drop-shadow(0px 0px 10px #000);    
+}
+.topbar h1 {
+    margin: 8px 60px;
+    text-align: center;
+    color: #FFF;
+    font-size: 30px;
+    max-width: 100%
+}
+.openbtn { /*menu button styling*/
+    text-decoration: none;
+    position: absolute;
+    top: -4px;
+    left: 15px;
+    font-size: 41px;
+    color: #FFF;
+    line-height: 1.5;
+
+}
+.openbtn:hover { /*change look when hovering */
+    text-shadow: 0 0 10px white;
+}
+
+/*
+ _               _       
+| |             | |      
+| |__   ___   __| |_   _ 
+| '_ \ / _ \ / _` | | | |
+| |_) | (_) | (_| | |_| |
+|_.__/ \___/ \__,_|\__, |
+                    __/ |
+                   |___/                
+*/
+body { /*body styling*/
+
+}
+.main{
+    margin: 75px 10px 20px 20px;
+}
+.main h1 {
+    color:#404040;
+    line-height: 1.0;
+    font-size: 1.9em;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+.main h2 {
+    color:#404040;
+    line-height: 1.0;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 10px 0px;
+}
+.main h3 {
+        color:#404040;
+    line-height: 1.1;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 10px 0px;
+}
+
+/*
+  _____            _    _                                        _  __ _      
+ |  __ \          | |  | |                                      (_)/ _(_)     
+ | |  | | ___  ___| | _| |_ ___  _ __ ______ ___ _ __   ___  ___ _| |_ _  ___ 
+ | |  | |/ _ \/ __| |/ / __/ _ \| '_ \______/ __| '_ \ / _ \/ __| |  _| |/ __|
+ | |__| |  __/\__ \   <| || (_) | |_) |     \__ \ |_) |  __/ (__| | | | | (__ 
+ |_____/ \___||___/_|\_\\__\___/| .__/      |___/ .__/ \___|\___|_|_| |_|\___|
+                                | |             | |                           
+                                |_|             |_|                           
+*/
+@media only screen and (min-width: 768px) {
+    .sidenav {
+        width: 300px !important;
+        background: rgba(17, 81, 114, 0.8);
+
+    }   
+    .main {
+        padding-left: 300px !important;
+        filter: blur(0px) !important;
+    }
+    .main h1 {
+    font-size: 2.1em;
+    }
+    .main h2 {
+        font-size: 1.7em;
+    }
+    .main h3 {
+        font-size: 1.3em;
+    }
+    .openbtn {
+        display: none !important;
+    }
+}
