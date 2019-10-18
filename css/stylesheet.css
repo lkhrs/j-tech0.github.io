@@ -90,12 +90,12 @@ font-family: 'Open Sans', sans-serif, Arial;
 .openbtn { /*menu button styling*/
     text-decoration: none;
     position: absolute;
-    top: -4px;
+    top: 50%;
+    transform: translateY(-50%);
     left: 15px;
-    font-size: 41px;
+    font-size: 50px;
+    text-align: center;
     color: #FFF;
-    line-height: 1.5;
-
 }
 .openbtn:hover { /*change look when hovering */
     text-shadow: 0 0 10px white;
