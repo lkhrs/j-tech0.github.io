@@ -131,6 +131,7 @@ body { /*body styling*/
 }
 .blur{
     filter: blur(2px);
+    transition: 0.1s;
 }
 .main h1 {
     color:#404040;
