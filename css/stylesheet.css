@@ -130,8 +130,11 @@ body { /*body styling*/
     margin: 75px 10px 20px 20px;
 }
 .blur{
-    filter: blur(2px);
-    transition: 0.1s;
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0,0,0);
+    transform: translateZ(0);
+    filter: blur(3px);
 }
 .main h1 {
     color:#404040;
