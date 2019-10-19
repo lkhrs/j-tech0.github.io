@@ -54,14 +54,14 @@
             var navOpen = 0
             function doMenu() {
                 if (navOpen == 0 || navOpen == '') {
-                    document.getElementById("mySidenav").style.width = "300px";
-                    document.getElementsByClassName("main")[0].style.filter = "blur(3px)";
-                    document.getElementsByClassName("menubtn")[0].classList.add("change");
+                    document.getElementsByClassName("sidenav")[0].classList.add("open");
+                    document.getElementsByClassName("main")[0].classList.add("blur");
+                    document.getElementsByClassName("menubtn")[0].classList.add("open");
                     navOpen = 1;
                 } else {
-                    document.getElementById("mySidenav").style.width = "0px";
-                    document.getElementsByClassName("main")[0].style.filter = "blur(0px)";
-                    document.getElementsByClassName("menubtn")[0].classList.remove("change");
+                    document.getElementsByClassName("sidenav")[0].classList.remove("open");
+                    document.getElementsByClassName("menubtn")[0].classList.remove("open");
+                    document.getElementsByClassName("main")[0].classList.remove("blur");
                     navOpen = 0;
                 }
             }
