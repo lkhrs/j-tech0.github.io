@@ -55,13 +55,17 @@
             function doMenu() {
                 if (navOpen == 0 || navOpen == '') {
                     document.getElementsByClassName("sidenav")[0].classList.add("open");
-                    document.getElementsByClassName("main")[0].classList.add("blur");
                     document.getElementsByClassName("menubtn")[0].classList.add("open");
+                    setTimeout(function(){
+                        document.getElementsByClassName("main")[0].classList.add("blur");
+
+                    }, 300)
                     navOpen = 1;
                 } else {
                     document.getElementsByClassName("sidenav")[0].classList.remove("open");
-                    document.getElementsByClassName("main")[0].classList.remove("blur");
+                    
                     document.getElementsByClassName("menubtn")[0].classList.remove("open");
+                    document.getElementsByClassName("main")[0].classList.remove("blur");
                     navOpen = 0;
                 }
             }
