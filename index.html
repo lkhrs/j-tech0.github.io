@@ -12,6 +12,17 @@
         <!-- Overall style code, fonts, CSS file -->
         <link rel="stylesheet" href="/css/stylesheet.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet">
+        
+        <!-- Logo Code -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/media/logos/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/media/logos/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/media/logos/favicon-16x16.png">
+        <link rel="manifest" href="/media/logos/site.webmanifest">
+        <link rel="mask-icon" href="/media/logos/safari-pinned-tab.svg" color="#888888">
+        <link rel="shortcut icon" href="/media/logos/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-config" content="/media/logos/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
     </head>
     <body>
 <!--
@@ -30,7 +41,6 @@
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-            <h1>SynergySolutions</h1>
         </div> 
 <!--
  _____ _     _      _                                _      
@@ -42,6 +52,7 @@
 
 -->
         <div id="mySidenav" class="sidenav"> <!--Links for side menu bar-->
+            <img src="/media/logos/logowide.png" class="logo">
             <a href="#" class="current">Home</a>
             <a href="/SynergyConsulting/">SynergyConsulting</a>
             <a href="/SynergyResearch/">SynergyResearch</a> 
@@ -55,13 +66,13 @@
             function doMenu() {
                 if (navOpen == 0 || navOpen == '') {
                     document.getElementsByClassName("sidenav")[0].classList.add("open");
-                    document.getElementsByClassName("main")[0].classList.add("blur");
+                    document.getElementsByClassName("main")[0].classList.add("open");
                     document.getElementsByClassName("menubtn")[0].classList.add("open");
                     navOpen = 1;
                 } else {
                     document.getElementsByClassName("sidenav")[0].classList.remove("open");
                     document.getElementsByClassName("menubtn")[0].classList.remove("open");
-                    document.getElementsByClassName("main")[0].classList.remove("blur");
+                    document.getElementsByClassName("main")[0].classList.remove("open");
                     navOpen = 0;
                 }
             }
