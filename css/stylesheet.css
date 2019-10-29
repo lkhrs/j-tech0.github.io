@@ -8,7 +8,7 @@
  |___/  
 */
 *{
-    transition: 0.3s;
+    transition: 0.5s;
     font-family: 'Open Sans', sans-serif, Arial;
 }
 /*between-page animations*/
@@ -26,7 +26,9 @@ html.is-animating .sidenav .transition-current a:nth-child(n+2){
     height: 0px;
     opacity: 0;
 }
-
+html.is-animating hr {
+    max-width: 0px;
+}
 /*
      _     _                                   
     (_)   | |                                  
@@ -167,6 +169,14 @@ body { /*body styling*/
 }
 .main.open{
     transform: translate3d(300px, 0, 0);
+}
+hr {
+    border: none;
+    background-color: 1a7fba;
+    height: 1px;
+    width: 100%;
+    max-width: 580px;
+    margin: 10px 0px;
 }
 .main h1 {
     color:#404040;
