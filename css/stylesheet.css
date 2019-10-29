@@ -8,7 +8,7 @@
  |___/  
 */
 *{
-    transition: 0.5s;
+    transition: 0.3s;
     font-family: 'Open Sans', sans-serif, Arial;
 }
 /*between-page animations*/
@@ -169,6 +169,7 @@ body { /*body styling*/
     
 }
 hr {
+    transition-duration: 1s;
     border: none;
     background-color: 1a7fba;
     height: 1px;
