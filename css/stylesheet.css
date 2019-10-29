@@ -16,6 +16,7 @@
     opacity: 1;
 }
 html.is-animating .transition-fade {
+    transition-delay: 0.4s;
     opacity: 0;
 }
 html.is-animating .sidenav .transition-current {
