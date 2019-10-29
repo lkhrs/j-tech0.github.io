@@ -11,7 +11,22 @@
     transition: 0.4s;
     font-family: 'Open Sans', sans-serif, Arial;
 }
- 
+/*between-page animations*/
+.transition-fade {
+    opacity: 1;
+}
+html.is-animating .transition-fade {
+    opacity: 0;
+}
+html.is-animating .sidenav .transition-current {
+    background-color: transparent;
+}
+html.is-animating .sidenav .transition-current a:nth-child(n+2){
+    padding: 0px 8px 0px 52px;
+    height: 0px;
+    opacity: 0;
+}
+
 /*
      _     _                                   
     (_)   | |                                  
@@ -31,10 +46,16 @@
     background-color: #1a7fba;
     overflow-x: hidden;
 }
-.sidenav.open {
+.sidenav.open { /*when the side menu is open*/
     transform: translate3d(320px, 0px, 0px);
 }
-.sidenav a { /*style for links in sidenav*/
+.sidenav .logo {/*position the logo at the top of the sidenav*/
+    position: relative;
+    padding: 10px;
+    left: 40px;
+    width: 240px;
+}
+.sidenav a:first-child { /*style for main links in sidenav*/
     padding: 10px 8px 10px 32px;
     text-decoration: none;
     height: 30px;
@@ -43,20 +64,32 @@
     display: block;
     text-shadow: 0 0 2px black;
     white-space: nowrap;
+    opacity: 1;
+}
+.sidenav a { /*style for sub-links in sidenav*/
+    padding: 0px 8px 0px 52px;
+    text-decoration: none;
+    height: 25px;
+    font-size: 20px;
+    color: #FFF;
+    display: block;
+    text-shadow: 0 0 2px black;
+    white-space: nowrap;
+    height: 0px;
+    opacity: 0;
 }
 .sidenav a:hover { /*change link style on hover*/
-    color: #ffffff;
     text-shadow: 0 0 2px white;
 }
-.sidenav .current {
+.sidenav .transition-current {/*highlight current page*/
     background-color: #6296b5;
+}/*show sublinks for current page*/
+.sidenav .transition-current a:nth-child(n+2){
+    padding: 10px 8px 10px 52px;
+    height: auto;
+    opacity: 1;
 }
-.sidenav .logo {
-    position: relative;
-    padding: 10px;
-    left: 40px;
-    width: 240px;
-}
+
 
 /*
  _                _                
@@ -91,6 +124,7 @@
     position: absolute;
     left: 10px;
     top: 7px;
+    outline: none;
 }
 .bar1, .bar2, .bar3 {
     width: 30px;
