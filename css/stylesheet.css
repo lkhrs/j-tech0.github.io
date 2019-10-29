@@ -21,7 +21,7 @@ html.is-animating .transition-fade {
 html.is-animating .sidenav .transition-current {
     background-color: transparent;
 }
-html.is-animating .sidenav .transition-current a:nth-child(n+2){
+html.is-animating .sidenav .show2a a:nth-child(n+2){
     padding: 0px 8px 0px 52px;
     height: 0px;
     opacity: 0;
@@ -29,6 +29,7 @@ html.is-animating .sidenav .transition-current a:nth-child(n+2){
 html.is-animating hr {
     max-width: 0px;
 }
+
 /*
      _     _                                   
     (_)   | |                                  
@@ -86,9 +87,9 @@ html.is-animating hr {
 .sidenav .transition-current {/*highlight current page*/
     background-color: #6296b5;
 }/*show sublinks for current page*/
-.sidenav .transition-current a:nth-child(n+2){
+.sidenav .show2a:hover a:nth-child(n+2){
     padding: 10px 8px 10px 52px;
-    height: auto;
+    height: 25px;
     opacity: 1;
 }
 
@@ -108,7 +109,7 @@ html.is-animating hr {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 52px;
     z-index: 2;
     background-color: 1a7fba;
@@ -117,7 +118,7 @@ html.is-animating hr {
 .topbar .logo {
     height: 52px;
     display: block;
-    margin:auto;
+    margin: auto;
 }
 .menubtn {
     cursor: pointer;
@@ -159,16 +160,13 @@ html.is-animating hr {
 body { /*body styling*/
     background-image: linear-gradient(#f5f5f5, #e5e5e5);
     background-attachment: fixed;
-    overflow-x: hidden;
-
 }
 .main{
     position: absolute;
     margin: 45px 0px 0px 0px;
     padding: 20px 20px 20px 20px;
-}
-.main.open{
-    transform: translate3d(300px, 0, 0);
+    overflow-x: hidden;
+    
 }
 hr {
     border: none;
@@ -181,23 +179,50 @@ hr {
 .main h1 {
     color:#404040;
     line-height: 1.0;
-    font-size: 1.9em;
+    font-size: 1.7em;
     font-weight: 700;
     margin: 10px 0px;
 }
 .main h2 {
     color:#404040;
     line-height: 1.0;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 400;
     margin: 10px 0px;
 }
 .main h3 {
-        color:#404040;
+    color:#404040;
     line-height: 1.1;
     font-size: 1em;
     font-weight: 300;
     margin: 10px 0px;
+}
+.main a {
+    color: #404040;
+    
+}
+
+/*Flex elements*/
+.flexcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+.flexitemdivis {
+    width: 200px;
+    max-width: 100%;
+    padding: 30px;
+}
+.flexitemteam {
+    width: 200px;
+    max-width: 100%;
+    padding: 30px;
+}
+.flexitemteam img {
+    width: 100%;
+    border-radius: 50%;
 }
 
 /*

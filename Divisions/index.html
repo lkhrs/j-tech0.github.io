@@ -1,6 +1,6 @@
 <html> <!--It's an HTML document yay-->
     <head> <!--Head Meta stuff in here-->
-        <title>SynergySecurity</title> <!--Page title. Quite important-->
+        <title>SynergySolutions Divisions</title> <!--Page title. Quite important-->
         <!--Description Meta etc-->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,23 +63,20 @@
                     <a href="/" onclick="navClose()">Home</a>
                 </div>
                 <div>
-                    <a href="/SynergyConsulting/" onclick="navClose()">SynergyConsulting</a>
-                    <a href="/SynergyConsulting/" onclick="navClose()">Our Services</a>
+                    <a href="/About-Us/" onclick="navClose()">About Us</a>
                 </div>
-                <div>
-                    <a href="/SynergyResearch/" onclick="navClose()">SynergyResearch</a>
-                    <a href="/SynergyResearch/" onclick="navClose()">Our Services</a>
-                </div>
-                <div>
-                    <a href="/SynergyStudios/" onclick="navClose()">SynergyStudios</a>
-                    <a href="/SynergyStudios/" onclick="navClose()">Our Services</a>
-                </div>
-                <div class="transition-current">
-                    <a href="/SynergySecurity/" onclick="navClose()">SynergySecurity</a>
-                    <a href="/SynergySecurity/" onclick="navClose()">Our Services</a>
+                <div class="transition-current show2a">
+                    <a href="/Divisions/" onclick="navClose()">Divisions</a>
+                    <a href="/Divisions/SynergyConsulting/" onclick="navClose()">SynergyConsulting</a>
+                    <a href="/Divisions/SynergyResearch/" onclick="navClose()">SynergyResearch</a>
+                    <a href="/Divisions/SynergySecurity/" onclick="navClose()">SynergySecurity</a>
+                    <a href="/Divisions/SynergyStudios/" onclick="navClose()">SynergyStudios</a>
                 </div>
                 <div>
                     <a href="/The-Team/" onclick="navClose()">The Team</a>
+                </div>
+                <div>
+                    <a href="/Contact/" onclick="navClose()">Contact</a>
                 </div>
             </div>
 
@@ -95,20 +92,33 @@
                 }
                 function navOpen() {
                     document.getElementsByClassName("sidenav")[0].classList.add("open");
-                    document.getElementsByClassName("main")[0].classList.add("open");
                     document.getElementsByClassName("menubtn")[0].classList.add("open");
                     navIsOpen = 1;
                 }
                 function navClose() {
                     document.getElementsByClassName("sidenav")[0].classList.remove("open");
                     document.getElementsByClassName("menubtn")[0].classList.remove("open");
-                    document.getElementsByClassName("main")[0].classList.remove("open");
                     navIsOpen = 0;
                 }
             </script>
             <div class="transition-fade main">
-                <h1>Welcome To SynergySecurity!</h1>
+                <h1>Our Divisions</h1>
                 <hr>
+                <h3>SynergySolutions does some stuff:</h3>
+                <div class="flexcontainer">
+                    <div class="flexitemdivis">
+                        <a href="/Divisions/SynergyConsulting/"><h2>SynergyConsulting</h2></a>
+                    </div>
+                    <div class="flexitemdivis">
+                        <a href="/Divisions/SynergyResearch/"><h2>SynergyResearch</h2></a>
+                    </div>
+                    <div class="flexitemdivis">
+                        <a href="/Divisions/SynergyStudios/"><h2>SynergyStudios</h2></a>
+                    </div>
+                    <div class="flexitemdivis">
+                        <a href="/Divisions/SynergySecurity/"><h2>SynergySecurity</h2></a>
+                    </div>
+                </div>
 
             </div>
         </div>
