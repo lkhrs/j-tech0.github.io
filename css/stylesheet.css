@@ -122,8 +122,8 @@ html.is-animating hr {
 }
 .menubtn {
     cursor: pointer;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 35px;
     position: absolute;
     left: 10px;
     top: 7px;
