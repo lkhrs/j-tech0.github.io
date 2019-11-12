@@ -10,11 +10,11 @@
 *{
     transition: 0.3s;
     font-family: 'Open Sans', sans-serif, Arial;
-    --color1: #F0EDE6;
-    --color2: #83BEC8;
-    --color3: #1A7FBA;
-    --color4: #61637A;
-    --color5: #293437;
+    --color1: #F0EDE6; /*off-white*/
+    --color2: #83BEC8; /*light blue*/
+    --color3: #1A7FBA; /*blue*/
+    --color4: #61637A; /*grey*/
+    --color5: #293437; /*dark grey-blue*/
 }
 /*between-page animations*/
 .transition-fade {
@@ -159,7 +159,7 @@ html.is-animating hr {
                    |___/                
 */
 body { /*body styling*/
-    background-color: var(--color1);
+    background-color: var(--color4);
     
 }
 .main{
@@ -179,29 +179,32 @@ hr {
     margin: 10px 0px;
 }
 .main h1 {
-    color: var(--color5);
+    color: var(--color1);
     line-height: 1.0;
     font-size: 1.7em;
     font-weight: 700;
     margin: 10px 0px;
 }
 .main h2 {
-    color: var(--color5);
+    color: var(--color1);
     line-height: 1.0;
     font-size: 1.4em;
     font-weight: 400;
     margin: 10px 0px;
 }
 .main h3 {
-    color: var(--color5);
+    color: var(--color1);
     line-height: 1.1;
     font-size: 1em;
     font-weight: 300;
     margin: 10px 0px;
 }
 .main a {
-    color: var(--color4);
-    
+    color: var(--color1);
+    text-decoration: none;
+}
+.main .a { /*change link style on hover*/
+    box-shadow: 0 0 2px black;
 }
 
 /*Flex elements*/
@@ -209,14 +212,13 @@ hr {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     max-width: 100%;
 }
-.flexitemdivis {
-    width: 200px;
-    max-width: 100%;
-    padding: 30px;
-}
+
+
+/*SPECIFIC TO PAGES OF SIDE*/
+/*The-Team*/
 .flexitemteam {
     width: 200px;
     max-width: 100%;
@@ -225,6 +227,23 @@ hr {
 .flexitemteam img {
     width: 100%;
     border-radius: 50%;
+}
+
+/*Divisions*/
+
+.flexitemdivis {
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: var(--color5);
+    padding: 5px;
+}
+.flexitemdivis h2 {
+    text-align: center;
+}
+.main a:hover > .flexitemdivis {
+    box-shadow: 0 0 3px var(--color3);
 }
 
 /*
