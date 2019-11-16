@@ -60,23 +60,23 @@
             <div id="mySidenav" class="sidenav"> <!--Links for side menu bar-->
                 <img src="/media/logos/logowide.png" class="logo">
                 <div>
-                    <a href="/" onclick="navClose()">Home</a>
+                    <a href="/" onclick="navClose(); divisToggle('close')">Home</a>
                 </div>
                 <div>
-                    <a href="/About-Us/" onclick="navClose()">About Us</a>
+                    <a href="/About-Us/" onclick="navClose(); divisToggle('close')">About Us</a>
                 </div>
-                <div class="hide2a">
-                    <a href="/Divisions/" onclick="navClose()">Divisions</a>
+                <div class="divishide">
+                    <a href="#" onclick="divisToggle('toggle')">Divisions</a>
                     <a href="/Divisions/SynergyConsulting/" onclick="navClose()">SynergyConsulting</a>
                     <a href="/Divisions/SynergyResearch/" onclick="navClose()">SynergyResearch</a>
                     <a href="/Divisions/SynergySecurity/" onclick="navClose()">SynergySecurity</a>
                     <a href="/Divisions/SynergyStudios/" onclick="navClose()">SynergyStudios</a>
                 </div>
                 <div>
-                    <a href="/The-Team/" onclick="navClose()">The Team</a>
+                    <a href="/The-Team/" onclick="navClose(); divisToggle('close')">The Team</a>
                 </div>
                 <div class="transition-current">
-                    <a href="/Contact/" onclick="navClose()">Contact</a>
+                    <a href="/Contact/" onclick="navClose(); divisToggle('close')">Contact</a>
                 </div>
             </div>
 
@@ -99,6 +99,13 @@
                     document.getElementsByClassName("sidenav")[0].classList.remove("open");
                     document.getElementsByClassName("menubtn")[0].classList.remove("open");
                     navIsOpen = 0;
+                }
+                function divisToggle(x){
+                    if (x == "toggle") {
+                        document.getElementsByClassName("divishide")[0].classList.toggle("show2a");
+                    } else if (x == "close") {
+                        document.getElementsByClassName("divishide")[0].classList.remove("show2a");
+                    }
                 }
             </script>
             <div class="transition-fade main">

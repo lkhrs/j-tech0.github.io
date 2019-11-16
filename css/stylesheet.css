@@ -159,7 +159,7 @@ html.is-animating hr {
                    |___/                
 */
 body { /*body styling*/
-    background-color: var(--color4);
+    background-color: var(--color1);
     
 }
 .main{
@@ -179,28 +179,28 @@ hr {
     margin: 10px 0px;
 }
 .main h1 {
-    color: var(--color1);
+    color: var(--color5);
     line-height: 1.0;
     font-size: 1.7em;
     font-weight: 700;
     margin: 10px 0px;
 }
 .main h2 {
-    color: var(--color1);
+    color: var(--color5);
     line-height: 1.0;
     font-size: 1.4em;
     font-weight: 400;
     margin: 10px 0px;
 }
 .main h3 {
-    color: var(--color1);
+    color: var(--color5);
     line-height: 1.1;
     font-size: 1em;
     font-weight: 300;
     margin: 10px 0px;
 }
 .main a {
-    color: var(--color1);
+    color: var(--color5);
     text-decoration: none;
 }
 .main .a { /*change link style on hover*/
@@ -236,14 +236,15 @@ hr {
     height: 100px;
     margin: 10px;
     border-radius: 10px;
-    background-color: var(--color5);
+    background-color: var(--color4);
     padding: 5px;
 }
-.flexitemdivis h2 {
+.flexitemdivis h2, .flexitemdivis h3 {
+    color: var(--color1);
     text-align: center;
 }
 .main a:hover > .flexitemdivis {
-    box-shadow: 0 0 3px var(--color3);
+    box-shadow: 0 0 5px var(--color2);
 }
 
 /*
