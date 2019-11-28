@@ -15,6 +15,8 @@
     --color3: #1a7fba; /*blue*/
     --color4: #61637A; /*grey*/
     --color5: #293437; /*dark grey-blue*/
+    outline: none!important;
+
 }
 /*between-page animations*/
 .transition-fade {
@@ -135,7 +137,6 @@ html.is-animating .sidenav a {
     position: absolute;
     left: 10px;
     top: 7px;
-    outline: none;
 }
 .bar1, .bar2, .bar3 {
     width: 30px;
