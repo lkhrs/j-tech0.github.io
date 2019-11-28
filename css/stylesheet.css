@@ -78,6 +78,8 @@ html.is-animating hr {
     height: 0px;
     opacity: 0;
     overflow-y: hidden;
+    text-shadow: 0px 0px 2px var(--color4);
+
 }
 .sidenav .show2a a:nth-child(n+2) {
     padding: 10px 8px 10px 52px;
@@ -85,12 +87,16 @@ html.is-animating hr {
     opacity:1;
 }
 .sidenav a:hover { /*change link style on hover*/
-    transform: scale(1.02);
-    
+    transform: scale(1.03);
+    text-shadow: 3px 3px 5px var(--color4);    
 }
 .sidenav .transition-current {/*highlight current page*/
     background-color: var(--color4);
-}/*show sublinks for current page*/
+}
+html.is-animating .sidenav a {
+    transform: scale(1)!important;
+    text-shadow: 0px 0px 2px var(--color4)!important;
+}
 
 
 
@@ -117,10 +123,10 @@ html.is-animating hr {
 
 }
 .topbar .logo {
-    height: 46px;
+    height: 36px;
     display: block;
-    margin: 3px auto;
-    filter: drop-shadow(0 0 20px var(--color5));
+    margin: 8px auto;
+    filter: drop-shadow(0 0 10px var(--color5));
 }
 .menubtn {
     cursor: pointer;
