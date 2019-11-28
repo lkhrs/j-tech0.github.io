@@ -46,7 +46,7 @@ html.is-animating hr {
     z-index: 1;
     top: 0px;
     left: -320px;
-    background-color: var(--color5);
+    background-color: var(--color3);
     overflow-x: hidden;
     box-shadow: 0px 0px 5px var(--color5);
 }
@@ -57,7 +57,6 @@ html.is-animating hr {
     position: relative;
     left: 10px;
     height: 52px;
-    filter: drop-shadow(0 0 20px var(--color5));
 }
 .sidenav a:first-child { /*style for main links in sidenav*/
     padding: 10px 8px 10px 32px;
@@ -114,12 +113,14 @@ html.is-animating hr {
     height: 52px;
     z-index: 2;
     background-color: var(--color3);
+    box-shadow: 0px 0px 5px var(--color5);
+
 }
 .topbar .logo {
     height: 46px;
     display: block;
     margin: 3px auto;
-    filter: drop-shadow(1px 1px 3px var(--color5));
+    filter: drop-shadow(0 0 20px var(--color5));
 }
 .menubtn {
     cursor: pointer;
@@ -268,6 +269,7 @@ hr {
     .sidenav .logo{
         padding: 20px;
         height: 55px;
+        filter: drop-shadow(0 0 20px var(--color5));
     }
     .main {
         transform: translate3d(0px, 0px, 0px) !important;
