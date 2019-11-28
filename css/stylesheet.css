@@ -90,7 +90,9 @@ html.is-animating hr {
 }
 .sidenav a:hover { /*change link style on hover*/
     transform: scale(1.03);
-    text-shadow: 3px 3px 5px var(--color4);    
+    text-shadow: 3px 3px 5px var(--color4);
+    outline: none!important;
+
 }
 .sidenav .transition-current {/*highlight current page*/
     background-color: var(--color4);
@@ -98,6 +100,8 @@ html.is-animating hr {
 html.is-animating .sidenav a {
     transform: scale(1)!important;
     text-shadow: 0px 0px 2px var(--color4)!important;
+    outline: none!important;
+
 }
 
 
