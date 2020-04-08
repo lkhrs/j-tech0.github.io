@@ -255,7 +255,6 @@ body { /*body styling*/
     margin: 45px 0px 0px 0px;
     padding: 20px 20px 20px 20px;
     overflow-x: hidden;
-
     
 }
 .main.top{
@@ -342,6 +341,11 @@ hr {
     height: 0;
     overflow: hidden;
 }
+.flexitemteam a{
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
 .flexitemteam:hover{
     box-shadow: 1px 1px 10px var(--color4);
 }
@@ -401,6 +405,12 @@ hr {
     height:90%;
     overflow-x: hidden;
     overflow-y: scroll;
+}
+.teambio a{
+    position: relative;
+    left: 20px;
+    font-size: 0.9em;
+    color: var(--color3)
 }
 /*Divisions*/
 
