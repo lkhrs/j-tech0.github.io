@@ -388,12 +388,14 @@ hr {
     left: 20px; 
     top: 0px;
     margin: 0;
+    max-width: 30%;
 }
 .teambio h3{
     position: relative;
     left: 20px; 
     top: 0px;
     margin: 0;
+    max-width: 30%;
 }
 .teambio h4{
     position: absolute;
