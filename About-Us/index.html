@@ -1,6 +1,6 @@
 <html> <!-- It's an HTML document yay. Welcome. -->
     <head> <!-- Head meta stuff in here -->
-        <title>SWG - The Team</title> <!-- Page title. Quite important -->
+        <title>SWG - About Us</title> <!-- Page title. Quite important -->
         <!-- Description Meta etc ok i'll stop commenting every line -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -55,10 +55,10 @@
                 <div>
                     <a href="/" onclick="navClose()">Home</a>
                 </div>
-                <div>
+                <div class="transition-current">
                     <a href="/About-Us/" onclick="navClose()">About Us</a>
                 </div>
-                <div class="transition-current">
+                <div>
                     <a href="/The-Team/" onclick="navClose()">The Team</a>
                 </div>
                 <div>
@@ -103,10 +103,10 @@
                     <div>
                         <a href="/">Home</a>
                     </div>
-                    <div>
+                    <div class="transition-current">
                         <a href="/About-Us/">About Us</a>
                     </div>
-                    <div class="transition-current">
+                    <div>
                         <a href="/The-Team/">The Team</a>
                     </div>
                     <div>
@@ -115,110 +115,10 @@
                 </div>
             </div> <!-- end of the topmenu links -->
             <div class="transition-fade main top">
-                <h1>Meet The Team!</h1>
+                <h1>Welcome to SynergySolutions!</h1>
                 <hr>
-                <h2>Leadership</h2>
-                <div class="flexcontainer">
-                    <div class="flexitemteam 1" onclick="teamitemopen(1)">
-                        <img src="/media/images/team/KoltonTebbey.jpeg">
-                        <h2>Kolton Tebbey</h2>
-                        <h3>President and CEO</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                    <div class="flexitemteam 2" onclick="teamitemopen(2)">
-                        <img src="/media/images/team/generichead.jpg">
-                        <h2>Ajay Sharma</h2>
-                        <h3>Director of Business Development</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                    <div class="flexitemteam 3" onclick="teamitemopen(3)">
-                        <img src="/media/images/team/generichead.jpg">
-                        <h2>Josephine Jeffries</h2>
-                        <h3>Director of Human Resources</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                </div>
-                <h2>Consulting</h2>
-                <div class="flexcontainer">
-                    <div class="flexitemteam 4" onclick="teamitemopen(4)">
-                        <img class="headpic" src="/media/images/team/generichead.jpg">
-                        <h2>Bledea Raul</h2>
-                        <h3>Full-Stack Developer</h3>
-                        <h4>This is the bio text</h4>
-                    </div>
-                    <div class="flexitemteam 5" onclick="teamitemopen(5)">
-                        <img src="/media/images/team/generichead.jpg">
-                        <h2>Daniel Berry</h2>
-                        <h3>Technology Consultant</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                    <div class="flexitemteam 6" onclick="teamitemopen(6)">
-                        <img src="/media/images/team/DennisRauchhaus.jpeg">
-                        <h2>Dennis Rauchhaus</h2>
-                        <h3>Marketing Consultant</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                    <div class="flexitemteam 7" onclick="teamitemopen(7)">
-                        <img src="/media/images/team/generichead.jpg">
-                        <h2>James Turner</h2>
-                        <h3>Designer</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                    <div class="flexitemteam 12" onclick="teamitemopen(12)">
-                        <img src="/media/images/team/LukeHarris.jpg">
-                        <h2>Luke Harris</h2>
-                        <h3>Technology Consultant</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                    <div class="flexitemteam 8" onclick="teamitemopen(8)">
-                        <img src="/media/images/team/NickAndry.jpeg">
-                        <h2>Nick Andry</h2>
-                        <h3>Lead Mobile Developer</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                    <div class="flexitemteam 9" onclick="teamitemopen(9)">
-                        <img src="/media/images/team/generichead.jpg">
-                        <h2>Saif Rajpal</h2>
-                        <h3>Job Title</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                    <div class="flexitemteam 10" onclick="teamitemopen(10)">
-                        <img src="/media/images/team/generichead.jpg">
-                        <h2>Sydney Spindel</h2>
-                        <h3>Job Title</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                    <div class="flexitemteam 11" onclick="teamitemopen(11)">
-                        <img src="/media/images/team/generichead.jpg">
-                        <h2>Wiktor Cielebon</h2>
-                        <h3>Full-Stack Developer</h3>
-                        <h4>bio</h4>
-                        <a href="https://linkedin.com">Linkedin</a>
-                    </div>
-                </div>
-                <script>
-                    function teamitemopen(n) {
-                        document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
-                        document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0].innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
-                    }
-                    function teamitemclose() {
-                        document.getElementsByClassName("teambio")[0].style.transform = "translateY(-100vh)";
+                <h3>Page under Construction</h3>
 
-                        
-                    }
-                </script>
-            </div>
-            <div class="teambio">
             </div>
         </div>
     </body>
