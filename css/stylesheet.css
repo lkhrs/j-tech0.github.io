@@ -46,7 +46,7 @@ html.is-animating hr {
     width: 300px;
     position: fixed;
     z-index: 1;
-    top: 0px;
+    top: 52px;
     left: -320px;
     background-color: var(--color3);
     overflow-x: hidden;
@@ -90,7 +90,7 @@ html.is-animating hr {
 }
 .sidenav a:hover { /*change link style on hover*/
     transform: scale(1.03);
-    text-shadow: 3px 3px 5px var(--color4);
+    text-shadow: 1px 1px 3px #111111;
     outline: none!important;
 
 }
@@ -98,6 +98,79 @@ html.is-animating hr {
     background-color: var(--color4);
 }
 html.is-animating .sidenav a {
+    transform: scale(1)!important;
+    text-shadow: 0px 0px 2px var(--color4)!important;
+    outline: none!important;
+
+}
+
+/*
+  _                                           
+ | |                                          
+ | |_ ___  _ __    _ __ ___   ___ _ __  _   _ 
+ | __/ _ \| '_ \  | '_ ` _ \ / _ \ '_ \| | | |
+ | || (_) | |_) | | | | | | |  __/ | | | |_| |
+  \__\___/| .__/  |_| |_| |_|\___|_| |_|\__,_|
+          | |                                 
+          |_|                                 
+*/
+
+.topnav { /*side navigation menu style*/
+    height: 70px; 
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    opacity: 0;
+    top: 0px;
+    left: 0px;
+    background-color: var(--color3);
+    overflow-x: hidden;
+    box-shadow: 0px 0px 5px var(--color5);
+    display: inline-flex;
+}
+
+.topnav .logo {/*position the logo at the top of the sidenav*/
+    position: absolute;
+    display: flex;
+    padding: 5px 15px;
+    left: 0px;
+    top: 4px;
+    height: 52px;
+    filter: drop-shadow(0 0 10px var(--color5));
+
+}
+.toplinks {
+    position: absolute;
+    display: flex;
+    left: 240px;
+    top: 6px;
+    height: 58px;
+}
+.toplinks div{
+    margin: 10px;
+    border-radius: 10px;
+}
+.topnav a { /*style for sub-links in sidenav*/
+    padding: 6px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color1);
+    float: left;
+    opacity: 1;
+    overflow-y: hidden;
+    text-shadow: 0px 0px 2px var(--color4);
+
+}
+.toplinks div:hover { /*change link style on hover*/
+    transform: scale(1.03);
+    box-shadow: 1px 1px 3px #111111;
+    outline: none!important;
+
+}
+.toplinks .transition-current {/*highlight current page*/
+    background-color: var(--color4);
+}
+html.is-animating .topnav a {
     transform: scale(1)!important;
     text-shadow: 0px 0px 2px var(--color4)!important;
     outline: none!important;
@@ -181,6 +254,12 @@ body { /*body styling*/
     overflow-x: hidden;
 
     
+}
+.main.top{
+    position:absolute;
+    margin: 45px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    overflow-x: hidden;
 }
 hr {
     transition-duration: 1s;
@@ -274,8 +353,11 @@ hr {
     .topbar {
         height: 0px;
     }
+    .topnav {
+        opacity: 1 !important;
+    }   
     .sidenav {
-        transform: translate3d(320px, 0px, 0px) !important;
+        transform: translate3d(-320px, 0px, 0px) !important;
     }   
     .sidenav .logo{
         padding: 20px;
@@ -286,6 +368,11 @@ hr {
         transform: translate3d(0px, 0px, 0px) !important;
         margin: 0px 0px 0px 300px;
         padding-top: 10px
+    }
+    .main.top {
+        transform: translate3d(0px, 0px, 0px) !important;
+        margin: 0px 0px 0px 0px;
+        padding-top: 90px;
     }
     .main h1 {
     font-size: 2.1em;
