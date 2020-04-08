@@ -170,6 +170,9 @@ html.is-animating .sidenav a {
 .toplinks .transition-current {/*highlight current page*/
     background-color: var(--color4);
 }
+html.is-animating .toplinks .transition-current {
+    background-color: var(--color3);
+}
 html.is-animating .topnav a {
     transform: scale(1)!important;
     text-shadow: 0px 0px 2px var(--color4)!important;

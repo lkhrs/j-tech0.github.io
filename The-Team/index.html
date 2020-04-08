@@ -31,6 +31,62 @@
         <script defer src="/js/script.js"></script>
     </head>
     <body>
+
+<!--
+   _____ _     _                           _______          _                   _____          _      
+  / ____(_)   | |                         |__   __|        | |                 / ____|        | |     
+ | (___  _  __| | ___ _ __   __ ___   ___| |_| | ___  _ __ | |__   __ _ _ __  | |     ___   __| | ___ 
+  \___ \| |/ _` |/ _ \ '_ \ / _` \ \ / /_   _| |/ _ \| '_ \| '_ \ / _` | '__| | |    / _ \ / _` |/ _ \
+  ____) | | (_| |  __/ | | | (_| |\ V /  |_| | | (_) | |_) | |_) | (_| | |    | |___| (_) | (_| |  __/
+ |_____/|_|\__,_|\___|_| |_|\__,_| \_/       |_|\___/| .__/|_.__/ \__,_|_|     \_____\___/ \__,_|\___|
+                                                     | |                                              
+                                                     |_| this is for mobile/tablet users
+-->
+        <div class="topbar"> <!-- Topbar -->
+            <div class="menubtn" onclick="doMenu()"> <!-- This is the button to open the sidenav -->
+                <div class="bar1"></div>
+                <div class="bar2"></div> <!-- These are the button bits -->
+                <div class="bar3"></div>
+            </div>
+            <img src="/media/logos/SynSolLogoWide.svg" class="logo"> <!-- logo for topbar -->
+        </div>
+        <div id="swup"> <!-- contain the sidebar and body in swup animation - this should encapsulate the page content too -->
+            <div id="mySidenav" class="sidenav"> <!-- Links for side menu bar -->
+                <div>
+                    <a href="/" onclick="navClose()">Home</a>
+                </div>
+                <div>
+                    <a href="/About-Us/" onclick="navClose()">About Us</a>
+                </div>
+                <div class="transition-current">
+                    <a href="/The-Team/" onclick="navClose()">The Team</a>
+                </div>
+                <div>
+                    <a href="/Contact/" onclick="navClose()">Contact</a>
+                </div>
+            </div> <!-- end of the sidemenu links -->
+
+            <script>
+                /* Scripts to show and hide the side navigation bar */
+                var navIsOpen = 0
+                function doMenu() {
+                    if (navIsOpen == 0 || navIsOpen == '') {
+                        navOpen();
+                    } else {
+                        navClose();
+                    }
+                }
+                function navOpen() {
+                    document.getElementsByClassName("sidenav")[0].classList.add("open");
+                    document.getElementsByClassName("menubtn")[0].classList.add("open");
+                    navIsOpen = 1;
+                }
+                function navClose() {
+                    document.getElementsByClassName("sidenav")[0].classList.remove("open");
+                    document.getElementsByClassName("menubtn")[0].classList.remove("open");
+                    navIsOpen = 0;
+                }
+            </script>
 <!--
   _______                               _____          _      
  |__   __|                             / ____|        | |     
@@ -58,68 +114,6 @@
                     </div>
                 </div>
             </div> <!-- end of the topmenu links -->
-<!--
-   _____ _     _                           _______          _                   _____          _      
-  / ____(_)   | |                         |__   __|        | |                 / ____|        | |     
- | (___  _  __| | ___ _ __   __ ___   ___| |_| | ___  _ __ | |__   __ _ _ __  | |     ___   __| | ___ 
-  \___ \| |/ _` |/ _ \ '_ \ / _` \ \ / /_   _| |/ _ \| '_ \| '_ \ / _` | '__| | |    / _ \ / _` |/ _ \
-  ____) | | (_| |  __/ | | | (_| |\ V /  |_| | | (_) | |_) | |_) | (_| | |    | |___| (_) | (_| |  __/
- |_____/|_|\__,_|\___|_| |_|\__,_| \_/       |_|\___/| .__/|_.__/ \__,_|_|     \_____\___/ \__,_|\___|
-                                                     | |                                              
-                                                     |_| this is for mobile/tablet users
--->
-        <div class="topbar"> <!-- Topbar -->
-            <div class="menubtn" onclick="doMenu()"> <!-- This is the button to open the sidenav -->
-                <div class="bar1"></div>
-                <div class="bar2"></div> <!-- These are the button bits -->
-                <div class="bar3"></div>
-            </div>
-            <img src="/media/logos/SynSolLogoWide.svg" class="logo"> <!-- logo for topbar -->
-        </div>
-        <div id="swup"> <!-- contain the sidebar and body in swup animation - this should encapsulate the page content too -->
-            <div id="mySidenav" class="sidenav"> <!-- Links for side menu bar -->
-                <div>
-                    <a href="/">Home</a>
-                </div>
-                <div>
-                    <a href="/About-Us/">About Us</a>
-                </div>
-                <div class="transition-current">
-                    <a href="/The-Team/">The Team</a>
-                </div>
-                <div>
-                    <a href="/Contact/">Contact</a>
-                </div>
-            </div> <!-- end of the sidemenu links -->
-
-            <script>
-                /* Scripts to show and hide the side navigation bar */
-                var navIsOpen = 0
-                function doMenu() {
-                    if (navIsOpen == 0 || navIsOpen == '') {
-                        navOpen();
-                    } else {
-                        navClose();
-                    }
-                }
-                function navOpen() {
-                    document.getElementsByClassName("sidenav")[0].classList.add("open");
-                    document.getElementsByClassName("menubtn")[0].classList.add("open");
-                    navIsOpen = 1;
-                }
-                function navClose() {
-                    document.getElementsByClassName("sidenav")[0].classList.remove("open");
-                    document.getElementsByClassName("menubtn")[0].classList.remove("open");
-                    navIsOpen = 0;
-                }
-                function divisToggle(x){
-                    if (x == "toggle") {
-                        document.getElementsByClassName("divishide")[0].classList.toggle("show2a");
-                    } else if (x == "close") {
-                        document.getElementsByClassName("divishide")[0].classList.remove("show2a");
-                    }
-                }
-            </script>
             <div class="transition-fade main top">
                 <h1>Meet The Team!</h1>
                 <hr>
