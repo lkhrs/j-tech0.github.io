@@ -274,25 +274,32 @@ hr {
     max-width: 580px;
     margin: 10px 0px;
 }
-.main h1 {
+ h1 {
     color: var(--color5);
     line-height: 1.0;
     font-size: 1.7em;
     font-weight: 700;
     margin: 10px 0px;
 }
-.main h2 {
+ h2 {
     color: var(--color5);
     line-height: 1.0;
     font-size: 1.4em;
     font-weight: 400;
     margin: 10px 0px;
 }
-.main h3 {
+ h3 {
     color: var(--color5);
     line-height: 1.1;
     font-size: 1em;
     font-weight: 300;
+    margin: 10px 0px;
+}
+ h4 {
+    color: var(--color5);
+    line-height: 1.1;
+    font-size: 1em;
+    font-weight: 400;
     margin: 10px 0px;
 }
 .main a {
@@ -361,14 +368,15 @@ hr {
 }
 .teambio .closebtn{
     position: absolute;
+    transform: rotate(45deg);
     right:10px;
-    top:5px;
-    font-size: 20px;
+    top:0px;
+    font-size: 30px;
     padding: 0px;
     margin: 0px;
 }
 .teambio .closebtn:hover{
-    transform: scale(1.03);
+    transform: scale(1.03) rotate(45deg);
     outline: none!important;
     cursor: pointer;
 }
@@ -392,10 +400,10 @@ hr {
 .teambio h4{
     position: absolute;
     left: 35%; 
-    top: 10px;
+    top: 20px;
     margin: 0;
     width: 60%;
-    height:95%;
+    height:90%;
     overflow-x: hidden;
     overflow-y: scroll;
 }
