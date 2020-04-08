@@ -325,9 +325,8 @@ hr {
 .flexitemteam {
     display:flex;
     flex-flow: column wrap;
-    align-items: flex-start;
     width: 150px;
-    height: 240px;
+    height: 241px;
     padding: 20px;
     margin: 10px;
     border-radius: 20px;
@@ -343,16 +342,12 @@ hr {
     height: 0;
     overflow: hidden;
 }
-
-
-
 .flexitemteam:hover{
     box-shadow: 1px 1px 10px var(--color4);
 }
 .flexitemteam:hover img{
     border-radius:10px;
 }
-
 .teambio { /*side navigation menu style*/
     position: fixed;
     opacity: 1;
