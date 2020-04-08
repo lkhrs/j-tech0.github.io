@@ -314,7 +314,9 @@ hr {
 .flexitemteam {
     width: 200px;
     max-width: 100%;
-    padding: 30px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px
 }
 .flexitemteam img {
     width: 100%;
@@ -335,8 +337,11 @@ hr {
     color: var(--color1);
     text-align: center;
 }
-.main a:hover > .flexitemdivis {
-    box-shadow: 0 0 5px var(--color2);
+.flexitemteam:hover{
+    box-shadow: 1px 1px 10px var(--color4);
+}
+.flexitemteam:hover img{
+    border-radius:10px;
 }
 
 /*
