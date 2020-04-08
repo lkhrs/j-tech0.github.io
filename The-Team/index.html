@@ -119,30 +119,32 @@
                 <hr>
                 <h2>🅱️ig 🅱️oss</h2>
                 <div class="flexcontainer">
-                    <div class="flexitemteam">
+                    <div class="flexitemteam  1" onclick="teamitemopen(1)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
+                        <h4>This<br> is<br> the<br> bio<br> text<br> and<br> it<br> is<br> really<br> really<br> long<br> this<br> is<br> some<br> filler<br> rubbish<br> just<br> to <br>see<br> if<br> it<br> wraps<br> lines<br> around</h4>
                     </div>
                 </div>
                 <h2 id="SynergyConsulting">SynergyConsulting</h2>
                 <div class="flexcontainer">
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 2" onclick="teamitemopen(2)">
                         <img class="headpic" src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
+                        <h4>This is the bio text</h4>
                     </div>
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 3" onclick="teamitemopen(3)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
                     </div>
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 4" onclick="teamitemopen(4)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
                     </div>
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 5" onclick="teamitemopen(5)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
@@ -150,22 +152,22 @@
                 </div>
                 <h2 id="SynergyMedia">SynergyMedia</h2>
                 <div class="flexcontainer">
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 6" onclick="teamitemopen(6)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
                     </div>
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 7" onclick="teamitemopen(7)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
                     </div>
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 8" onclick="teamitemopen(8)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
                     </div>
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 9" onclick="teamitemopen(9)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
@@ -173,27 +175,41 @@
                 </div>
                 <h2 id="SynergyTechnology">SynergyTechnology</h2>
                 <div class="flexcontainer">
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 10" onclick="teamitemopen(10)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
                     </div>
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 11" onclick="teamitemopen(11)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
                     </div>
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 12" onclick="teamitemopen(12)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
                     </div>
-                    <div class="flexitemteam">
+                    <div class="flexitemteam 13" onclick="teamitemopen(13)">
                         <img src="/media/images/team/generichead.jpg">
                         <h2>Name</h2>
                         <h3>Job Title</h3>
                     </div>
                 </div>
+
+                <script>
+                    function teamitemopen(n) {
+                        document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
+                        document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0].innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
+                    }
+                    function teamitemclose() {
+                        document.getElementsByClassName("teambio")[0].style.transform = "translateY(-100vh)";
+
+                        
+                    }
+                </script>
+            </div>
+            <div class="teambio">
             </div>
         </div>
     </body>

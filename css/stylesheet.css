@@ -263,6 +263,7 @@ body { /*body styling*/
     margin: 45px 0px 0px 0px;
     padding: 20px 20px 20px 20px;
     overflow-x: hidden;
+    
 }
 hr {
     transition-duration: 1s;
@@ -315,17 +316,89 @@ hr {
 /*SPECIFIC TO PAGES OF SIDE*/
 /*The-Team*/
 .flexitemteam {
-    width: 200px;
-    max-width: 100%;
+    display:flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    width: 150px;
+    height: 240px;
     padding: 20px;
     margin: 10px;
-    border-radius: 20px
+    border-radius: 20px;
+    overflow-x: hidden;
+    cursor: pointer;
 }
 .flexitemteam img {
-    width: 100%;
+    width: 150px;;
     border-radius: 50%;
 }
+.flexitemteam h4{
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
 
+
+
+.flexitemteam:hover{
+    box-shadow: 1px 1px 10px var(--color4);
+}
+.flexitemteam:hover img{
+    border-radius:10px;
+}
+
+.teambio { /*side navigation menu style*/
+    position: fixed;
+    opacity: 1;
+    height: 80vh; 
+    width: 90vw;
+    max-width: 90vw;
+    top: 15vh;
+    left: 5vw;
+    background-color: var(--color1);
+    box-shadow: 0px 0px 3px var(--color5);
+    transform: translateY(-100vh);
+    border-radius: 20px;
+}
+.teambio .closebtn{
+    position: absolute;
+    right:10px;
+    top:5px;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+.teambio .closebtn:hover{
+    transform: scale(1.03);
+    outline: none!important;
+    cursor: pointer;
+}
+.teambio img{
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+.teambio h2{
+    position: relative;
+    left: 20px; 
+    top: 0px;
+    margin: 0;
+}
+.teambio h3{
+    position: relative;
+    left: 20px; 
+    top: 0px;
+    margin: 0;
+}
+.teambio h4{
+    position: absolute;
+    left: 35%; 
+    top: 10px;
+    margin: 0;
+    width: 60%;
+    height:95%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 /*Divisions*/
 
 .flexitemdivis {
@@ -333,19 +406,14 @@ hr {
     height: 100px;
     margin: 10px;
     border-radius: 10px;
-    background-color: var(--color4);
+    background-color: var(--color1);
     padding: 5px;
 }
 .flexitemdivis h2, .flexitemdivis h3 {
     color: var(--color1);
     text-align: center;
 }
-.flexitemteam:hover{
-    box-shadow: 1px 1px 10px var(--color4);
-}
-.flexitemteam:hover img{
-    border-radius:10px;
-}
+
 
 /*
   _____            _    _                                        _  __ _      
@@ -394,4 +462,12 @@ hr {
     .menubtn {
         display: none !important;
     }
+    .teambio{
+        height: 70vh; 
+        width: 60vw;
+        max-width: 80vw;
+        top: 20vh;
+        left: 20vw;
+    }
+    
 }
