@@ -121,6 +121,7 @@ html.is-animating .sidenav a {
     position: fixed;
     z-index: 1;
     opacity: 0;
+    visibility: hidden;
     top: 0px;
     left: 0px;
     background-color: var(--color3);
@@ -353,16 +354,17 @@ hr {
 }
 .teambio { /*side navigation menu style*/
     position: fixed;
+    z-index: 2;
     opacity: 1;
     height: 80vh; 
     width: 90vw;
-    max-width: 90vw;
     top: 15vh;
     left: 5vw;
     background-color: var(--color1);
     box-shadow: 0px 0px 3px var(--color5);
     transform: translateY(-100vh);
     border-radius: 20px;
+    overflow: hidden;
 }
 .teambio .closebtn{
     position: absolute;
@@ -388,24 +390,34 @@ hr {
     left: 20px; 
     top: 0px;
     margin: 0;
-    max-width: 30%;
+    max-width: 25%;
 }
 .teambio h3{
     position: relative;
     left: 20px; 
     top: 0px;
     margin: 0;
-    max-width: 30%;
+    max-width: 25%;
 }
-.teambio h4{
+.teambio h4 {
     position: absolute;
     left: 35%; 
-    top: 20px;
+    top: 0px;
+    right: 28px;
+    height: 75vh;
     margin: 0;
-    width: 60%;
-    height:90%;
+    padding: 2.5vh 0vh;
     overflow-x: hidden;
     overflow-y: scroll;
+}
+.teambio h4:after{
+    content:"";
+    position: fixed; 
+    left: 35%;
+    right: 28px;
+    top: 0px;
+    bottom: 0px;
+    box-shadow: inset -0px 20px 10px -10px var(--color1), inset 0px -20px 10px -10px var(--color1);
 }
 .teambio a{
     position: relative;
@@ -445,6 +457,7 @@ hr {
     }
     .topnav {
         opacity: 1 !important;
+        visibility: visible !important;
     }   
     .sidenav {
         transform: translate3d(-320px, 0px, 0px) !important;
@@ -483,5 +496,7 @@ hr {
         top: 20vh;
         left: 20vw;
     }
-    
+    .teambio h4{
+        height: 65vh;
+    }
 }
