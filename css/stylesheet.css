@@ -423,7 +423,7 @@ hr {
     margin: 0;
     padding: 2.5vh 0vh;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     line-height: ;
 }
 .teambio h4:after{
