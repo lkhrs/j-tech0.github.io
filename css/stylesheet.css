@@ -163,11 +163,11 @@ html.is-animating .sidenav a {
     height: 58px;
 }
 .toplinks div{
-    margin: 10px;
+    margin: 10px 5px;
     border-radius: 10px;
 }
 .topnav a { /*style for sub-links in sidenav*/
-    padding: 6px 15px;
+    padding: 6px;
     text-decoration: none;
     font-size: 20px;
     color: var(--color1);
