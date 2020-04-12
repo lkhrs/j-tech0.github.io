@@ -56,6 +56,9 @@
                     <a href="/" onclick="navClose()">Home</a>
                 </div>
                 <div>
+                    <a href="/About-Us/" onclick="navClose()">About Us</a>
+                </div>
+                <div>
                     <a href="/Our-Work/" onclick="navClose()">Our Work</a>
                 </div>
                 <div class="transition-current">
@@ -79,21 +82,28 @@
                 function navOpen() {
                     document.getElementsByClassName("sidenav")[0].classList.add("open");
                     document.getElementsByClassName("menubtn")[0].classList.add("open");
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
                     navIsOpen = 1;
                 }
                 function navClose() {
                     document.getElementsByClassName("sidenav")[0].classList.remove("open");
                     document.getElementsByClassName("menubtn")[0].classList.remove("open");
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
                     navIsOpen = 0;
                 }
                 function teamitemopen(n) {
                     document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
                     document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0].innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
+
                 }
                 function teamitemclose() {
                     document.getElementsByClassName("teambio")[0].style.transform = "translateY(-100vh)";
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
                 }
             </script>
+            <div class="clicktocloseoverlay" onclick="teamitemclose(); navClose()"> <!--overlay to close popup -->
+            </div>
 <!--
   _______                               _____          _      
  |__   __|                             / ____|        | |     
@@ -109,6 +119,9 @@
                 <div class="toplinks">
                     <div>
                         <a href="/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/About-Us/">About Us</a>
                     </div>
                     <div>
                         <a href="/Our-Work/">Our Work</a>
@@ -127,10 +140,15 @@
                 <h2>Leadership</h2>
                 <div class="flexcontainer">
                     <div class="flexitemteam 1" onclick="teamitemopen(1)">
-                        <img src="/media/images/team/KoltonTebbey.jpeg">
+                        <img src="/media/images/team/KoltonTebbey.png">
                         <h2>Kolton Tebbey</h2>
                         <h3>President and CEO</h3>
-                        <h4>Kolton Tebbey is the founder and CEO of Synergy Works Group. <br>He brings over 10 years of experience in areas such as product management, strategic leadership, marketing, software development, data analysis, and more. <br>Throughout his past experiences he has been able to drive traffic of over a quarter-billion hits across a portfolio of brands with a focus in targeted advertising, user acquisition &amp; retention, as well as community monetization. <br>Kolton studied Information Systems and Marketing at the Kelly School of Business and is currently pursuing a Master of Science in Information Systems.</h4>
+                        <h4>
+                            <p>Kolton Tebbey is the founder and CEO of Synergy Works Group.</p>
+                            <p>He brings over 10 years of experience in areas such as product management, strategic leadership, marketing, software development, data analysis, and more.</p>
+                            <p>Throughout his past experiences he has been able to drive traffic of over a quarter-billion hits across a portfolio of brands with a focus in targeted advertising, user acquisition &amp; retention, as well as community monetization.</p>
+                            <p>Kolton studied Information Systems and Marketing at the Kelly School of Business and is currently pursuing a Master of Science in Information Systems.</p>
+                        </h4>
                         <a href="https://www.linkedin.com/in/koltontebbey/">Linkedin</a>
                     </div>
                     <div class="flexitemteam 2" onclick="teamitemopen(2)">
@@ -178,7 +196,11 @@
                         <img src="/media/images/team/NickAndry.jpeg">
                         <h2>Nick Andry</h2>
                         <h3>Data Analyst</h3>
-                        <h4>Certified in Python programming and software development, Nick Andry works as a Business Data Analyst for Synergy Works Group.<br>He has made it to Nationals for Java programming in Business Professionals of America. For data analysis, he utilizes modern, feature-rich Python data science libraries to find the best trends and solutions for businesses.<br>He currently studies at North Harrison High School in Ramsey, Indiana.</h4>
+                        <h4>
+                            <p>Certified in Python programming and software development, Nick Andry works as a Business Data Analyst for Synergy Works Group.</p>
+                            <p>He has made it to Nationals for Java programming in Business Professionals of America. For data analysis, he utilizes modern, feature-rich Python data science libraries to find the best trends and solutions for businesses.</p>
+                            <p>He currently studies at North Harrison High School in Ramsey, Indiana.</p>
+                        </h4>
                         <a href="https://www.linkedin.com/in/nick-andry/">Linkedin</a>
                     </div>
                     <div class="flexitemteam 9" onclick="teamitemopen(9)">
@@ -187,7 +209,7 @@
                         <h3>Job Title</h3>
                     </div>
                     <div class="flexitemteam 10" onclick="teamitemopen(10)">
-                        <img src="/media/images/team/SydneySpindel.jpg">
+                        <img src="/media/images/team/SydneySpindel.png">
                         <h2>Sydney Spindel</h2>
                         <h3>Job Title</h3>
                     </div>
@@ -195,6 +217,14 @@
                         <img src="/media/images/team/WiktorCielebon.jpg">
                         <h2>Wiktor Cielebon</h2>
                         <h3>Full-Stack Developer</h3>
+                    </div>
+                </div>
+                <h2>Advisors</h2>
+                <div class="flexcontainer">
+                    <div class="flexitemteam 12" onclick="teamitemopen(12)">
+                        <img src="/media/images/team/generichead.jpg">
+                        <h2>Paul Tebbey</h2>
+                        <h3>Advisor</h3>
                     </div>
                 </div>
             </div>

@@ -56,6 +56,9 @@
                     <a href="/" onclick="navClose()">Home</a>
                 </div>
                 <div>
+                    <a href="/About-Us/" onclick="navClose()">About Us</a>
+                </div>
+                <div>
                     <a href="/Our-Work/" onclick="navClose()">Our Work</a>
                 </div>
                 <div>
@@ -79,21 +82,28 @@
                 function navOpen() {
                     document.getElementsByClassName("sidenav")[0].classList.add("open");
                     document.getElementsByClassName("menubtn")[0].classList.add("open");
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
                     navIsOpen = 1;
                 }
                 function navClose() {
                     document.getElementsByClassName("sidenav")[0].classList.remove("open");
                     document.getElementsByClassName("menubtn")[0].classList.remove("open");
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
                     navIsOpen = 0;
                 }
                 function teamitemopen(n) {
                     document.getElementsByClassName("teambio")[0].style.transform = "translateY(0)";
                     document.getElementsByClassName("teambio")[0].innerHTML = document.getElementsByClassName(n)[0].innerHTML + '<h5 class="closebtn" onclick="teamitemclose()">+</h5>';
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.add("show");
+
                 }
                 function teamitemclose() {
                     document.getElementsByClassName("teambio")[0].style.transform = "translateY(-100vh)";
+                    document.getElementsByClassName("clicktocloseoverlay")[0].classList.remove("show");
                 }
             </script>
+            <div class="clicktocloseoverlay" onclick="teamitemclose(); navClose()"> <!--overlay to close popup -->
+            </div>
 <!--
   _______                               _____          _      
  |__   __|                             / ____|        | |     
@@ -109,6 +119,9 @@
                 <div class="toplinks">
                     <div class="transition-current">
                         <a href="/">Home</a>
+                    </div>
+                    <div>
+                        <a href="/About-Us/">About Us</a>
                     </div>
                     <div>
                         <a href="/Our-Work/">Our Work</a>
