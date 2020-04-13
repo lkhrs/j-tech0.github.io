@@ -270,11 +270,10 @@ body { /*body styling*/
     position: absolute;
     margin: 45px 0px 0px 0px;
     padding: 20px 20px 20px 20px;
-    overflow-x: hidden;
-    
+    overflow-x: hidden;    
 }
 .main.top{
-    position:absolute;
+    position: absolute;
     margin: 45px 0px 0px 0px;
     padding: 20px 20px 20px 20px;
     overflow-x: hidden;
@@ -328,15 +327,31 @@ hr {
 /*Flex elements*/
 .flexcontainer {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flexcontainer img{
+    flex-basis 100px;
+    max-width: 200px;
+    margin: 15px;
+    flex-grow: 1;
+    order: -1;
+}
+.flexcontainer h3{
+    flex-basis: 400px;
+    flex-grow: 5;
+}
+
+/*SPECIFIC TO PAGES OF SIDE*/
+/*The-Team*/
+.flexteamcontainer{
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
 }
-
-
-/*SPECIFIC TO PAGES OF SIDE*/
-/*The-Team*/
 .flexitemteam {
     display:flex;
     flex-flow: column wrap;
@@ -511,6 +526,9 @@ hr {
         max-width: 80vw;
         top: 20vh;
         left: 20vw;
+    }
+    .flexcontainer img{
+        order: 0;
     }
     .teambio h4{
         height: 65vh;
