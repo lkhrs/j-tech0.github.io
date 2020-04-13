@@ -438,11 +438,10 @@ hr {
     margin: 0;
     padding: 2.5vh 0vh;
     overflow-x: hidden;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    line-height: ;
+    overflow-y: auto;
 }
 .teambio h4:after{
+    pointer-events: none;
     content:"";
     position: fixed; 
     left: 35%;
