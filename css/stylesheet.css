@@ -45,7 +45,7 @@ html.is-animating hr {
 }
 .clicktocloseoverlay.show{
     visibility: visible;
-    opacity: 100%;
+    opacity: 1;
 }
 /*
      _     _                                   
@@ -438,7 +438,8 @@ hr {
     margin: 0;
     padding: 2.5vh 0vh;
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     line-height: ;
 }
 .teambio h4:after{
