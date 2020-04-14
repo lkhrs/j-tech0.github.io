@@ -7,31 +7,36 @@
   __/ |                      
  |___/  
 */
-*{
+* {
     transition: 0.3s;
     font-family: 'Open Sans', sans-serif, Arial;
-    --color1: #f0ede6; /*off-white*/
-    --color2: #83bec8; /*light blue*/
-    --color3: #1a7fba; /*blue*/
-    --color4: #61637A; /*grey*/
-    --color5: #293437; /*dark grey-blue*/
-    outline: none!important;
+    --color1: #f0ede6;    /*off-white*/
+    --color2: #83bec8;    /*light blue*/
+    --color3: #1a7fba;    /*blue*/
+    --color4: #61637A;    /*grey*/
+    --color5: #293437;    /*dark grey-blue*/
+    outline: none !important;
 
 }
+
 /*between-page animations*/
 .transition-fade {
     opacity: 1;
 }
+
 html.is-animating .transition-fade {
     opacity: 0;
 }
+
 html.is-animating .sidenav .transition-current {
     background-color: transparent;
 }
+
 html.is-animating hr {
     max-width: 0px;
 }
-.clicktocloseoverlay{
+
+.clicktocloseoverlay {
     position: fixed;
     left: 0;
     right: 0;
@@ -41,12 +46,14 @@ html.is-animating hr {
     visibility: hidden;
     opacity: 0;
     z-index: 1;
-    
+
 }
-.clicktocloseoverlay.show{
+
+.clicktocloseoverlay.show {
     visibility: visible;
     opacity: 1;
 }
+
 /*
      _     _                                   
     (_)   | |                                  
@@ -56,8 +63,9 @@ html.is-animating hr {
 |___/_|\__,_|\___| |_| |_| |_|\___|_| |_|\__,_|
 */
 
-.sidenav { /*side navigation menu style*/
-    height: 100%; 
+.sidenav {
+    /*side navigation menu style*/
+    height: 100%;
     width: 300px;
     position: fixed;
     z-index: 2;
@@ -67,15 +75,21 @@ html.is-animating hr {
     overflow-x: hidden;
     box-shadow: 0px 0px 5px var(--color5);
 }
-.sidenav.open { /*when the side menu is open*/
+
+.sidenav.open {
+    /*when the side menu is open*/
     transform: translate3d(320px, 0px, 0px);
 }
-.sidenav .logo {/*position the logo at the top of the sidenav*/
+
+.sidenav .logo {
+    /*position the logo at the top of the sidenav*/
     position: relative;
     left: 10px;
     height: 52px;
 }
-.sidenav a:first-child { /*style for main links in sidenav*/
+
+.sidenav a:first-child {
+    /*style for main links in sidenav*/
     padding: 10px 8px 10px 32px;
     text-decoration: none;
     height: 30px;
@@ -85,7 +99,9 @@ html.is-animating hr {
     white-space: nowrap;
     opacity: 1;
 }
-.sidenav a { /*style for sub-links in sidenav*/
+
+.sidenav a {
+    /*style for sub-links in sidenav*/
     padding: 0px 8px 0px 52px;
     text-decoration: none;
     font-size: 20px;
@@ -98,24 +114,30 @@ html.is-animating hr {
     text-shadow: 0px 0px 2px var(--color4);
 
 }
+
 .sidenav .show2a a:nth-child(n+2) {
     padding: 10px 8px 10px 52px;
     height: 25px;
-    opacity:1;
+    opacity: 1;
 }
-.sidenav a:hover { /*change link style on hover*/
+
+.sidenav a:hover {
+    /*change link style on hover*/
     transform: scale(1.03);
     text-shadow: 1px 1px 3px #111111;
-    outline: none!important;
+    outline: none !important;
 
 }
-.sidenav .transition-current {/*highlight current page*/
+
+.sidenav .transition-current {
+    /*highlight current page*/
     background-color: var(--color4);
 }
+
 html.is-animating .sidenav a {
-    transform: scale(1)!important;
-    text-shadow: 0px 0px 2px var(--color4)!important;
-    outline: none!important;
+    transform: scale(1) !important;
+    text-shadow: 0px 0px 2px var(--color4) !important;
+    outline: none !important;
 
 }
 
@@ -130,8 +152,9 @@ html.is-animating .sidenav a {
           |_|                                 
 */
 
-.topnav { /*side navigation menu style*/
-    height: 70px; 
+.topnav {
+    /*side navigation menu style*/
+    height: 70px;
     width: 100%;
     position: fixed;
     z-index: 3;
@@ -145,7 +168,8 @@ html.is-animating .sidenav a {
     display: inline-flex;
 }
 
-.topnav .logo {/*position the logo at the top of the sidenav*/
+.topnav .logo {
+    /*position the logo at the top of the sidenav*/
     position: absolute;
     display: flex;
     padding: 5px 15px;
@@ -155,6 +179,7 @@ html.is-animating .sidenav a {
     filter: drop-shadow(0 0 10px var(--color5));
 
 }
+
 .toplinks {
     position: absolute;
     display: flex;
@@ -162,11 +187,14 @@ html.is-animating .sidenav a {
     top: 6px;
     height: 58px;
 }
-.toplinks div{
+
+.toplinks div {
     margin: 10px 5px;
     border-radius: 10px;
 }
-.topnav a { /*style for sub-links in sidenav*/
+
+.topnav a {
+    /*style for sub-links in sidenav*/
     padding: 6px;
     text-decoration: none;
     font-size: 20px;
@@ -177,22 +205,28 @@ html.is-animating .sidenav a {
     text-shadow: 0px 0px 2px var(--color4);
 
 }
-.toplinks div:hover { /*change link style on hover*/
+
+.toplinks div:hover {
+    /*change link style on hover*/
     transform: scale(1.03);
     box-shadow: 1px 1px 3px #111111;
-    outline: none!important;
+    outline: none !important;
 
 }
-.toplinks .transition-current {/*highlight current page*/
+
+.toplinks .transition-current {
+    /*highlight current page*/
     background-color: var(--color4);
 }
+
 html.is-animating .toplinks .transition-current {
     background-color: var(--color3);
 }
+
 html.is-animating .toplinks a {
-    transform: scale(1)!important;
-    text-shadow: 0px 0px 2px var(--color4)!important;
-    outline: none!important;
+    transform: scale(1) !important;
+    text-shadow: 0px 0px 2px var(--color4) !important;
+    outline: none !important;
 
 }
 
@@ -208,7 +242,8 @@ html.is-animating .toplinks a {
          | |                       
          |_|                       
 */
-.topbar { /*top bar style*/
+.topbar {
+    /*top bar style*/
     overflow: hidden;
     position: fixed;
     top: 0;
@@ -220,12 +255,14 @@ html.is-animating .toplinks a {
     box-shadow: 0px 0px 5px var(--color5);
 
 }
+
 .topbar .logo {
     height: 36px;
     display: block;
     margin: 8px auto;
     filter: drop-shadow(0 0 10px var(--color5));
 }
+
 .menubtn {
     cursor: pointer;
     width: 30px;
@@ -234,19 +271,25 @@ html.is-animating .toplinks a {
     left: 10px;
     top: 7px;
 }
-.bar1, .bar2, .bar3 {
+
+.bar1,
+.bar2,
+.bar3 {
     width: 30px;
     height: 4px;
     background-color: var(--color1);
     margin: 6px 0px;
     border-radius: 2px;
 }
+
 .open .bar1 {
     transform: rotate(-45deg) translate(-7px, 7px);
 }
+
 .open .bar2 {
     opacity: 0;
 }
+
 .open .bar3 {
     transform: rotate(45deg) translate(-7px, -7px);
 }
@@ -262,23 +305,27 @@ html.is-animating .toplinks a {
                     __/ |
                    |___/                
 */
-body { /*body styling*/
+body {
+    /*body styling*/
     background-color: var(--color1);
-    
+
 }
-.main{
-    position: absolute;
-    margin: 45px 0px 0px 0px;
-    padding: 20px 20px 20px 20px;
-    overflow-x: hidden;    
-}
-.main.top{
+
+.main {
     position: absolute;
     margin: 45px 0px 0px 0px;
     padding: 20px 20px 20px 20px;
     overflow-x: hidden;
-    
 }
+
+.main.top {
+    position: absolute;
+    margin: 45px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    overflow-x: hidden;
+
+}
+
 hr {
     transition-duration: 1s;
     border: none;
@@ -288,39 +335,46 @@ hr {
     max-width: 580px;
     margin: 10px 0px;
 }
- h1 {
+
+h1 {
     color: var(--color5);
     line-height: 1.0;
     font-size: 1.7em;
     font-weight: 700;
     margin: 10px 0px;
 }
- h2 {
+
+h2 {
     color: var(--color5);
     line-height: 1.0;
     font-size: 1.4em;
     font-weight: 400;
     margin: 10px 0px;
 }
- h3 {
+
+h3 {
     color: var(--color5);
     line-height: 1.1;
     font-size: 1em;
     font-weight: 300;
     margin: 10px 0px;
 }
- h4 {
+
+h4 {
     color: var(--color5);
     line-height: 1.1;
     font-size: 1em;
     font-weight: 400;
     margin: 10px 0px;
 }
+
 .main a {
     color: var(--color5);
     text-decoration: none;
 }
-.main .a { /*change link style on hover*/
+
+.main .a {
+    /*change link style on hover*/
     box-shadow: 0 0 2px black;
 }
 
@@ -331,107 +385,127 @@ hr {
     justify-content: center;
     align-items: center;
 }
-.flexcontainer img{
+
+.flexcontainer img {
     flex-basis 100px;
     max-width: 200px;
     margin: 15px;
     flex-grow: 1;
     order: -1;
 }
-.flexcontainer h3{
+
+.flexcontainer h3 {
     flex-basis: 400px;
     flex-grow: 5;
 }
 
 /*SPECIFIC TO PAGES OF SIDE*/
 /*The-Team*/
-.flexteamcontainer{
+.flexteamcontainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
 }
+
 .flexitemteam {
-    display:flex;
+    display: flex;
     flex-flow: column wrap;
-    width: 150px;;
+    width: 150px;
+    height: 280px;
     padding: 20px;
     margin: 10px;
     border-radius: 20px;
     overflow-x: hidden;
     cursor: pointer;
 }
+
 .flexitemteam img {
-    width: 150px;;
+    width: 150px;
     border-radius: 50%;
 }
-.flexitemteam h4{
+
+.flexitemteam h4 {
     visibility: hidden;
     height: 0;
     overflow: hidden;
 }
-.flexitemteam a{
+
+.flexitemteam a {
     visibility: hidden;
     height: 0;
     overflow: hidden;
 }
-.flexitemteam:hover{
+
+.flexitemteam:hover {
     box-shadow: 1px 1px 10px var(--color4);
 }
-.flexitemteam:hover img{
-    border-radius:10px;
+
+.flexitemteam:hover img {
+    border-radius: 10px;
 }
-.teambio { /*side navigation menu style*/
+
+.teambio {
+    /*side navigation menu style*/
     position: fixed;
+    left: 0px;
+    right: 0px;
+
     z-index: 2;
     opacity: 1;
-    height: 80vh; 
+    height: calc(100vh - 90px);
     width: 90vw;
-    top: 15vh;
-    left: 5vw;
+    max-width: 768px;
+    top: 70px;
+    margin: 0 auto;
     background-color: var(--color1);
     box-shadow: 0px 0px 3px var(--color5);
     transform: translateY(-100vh);
     border-radius: 20px;
     overflow: hidden;
 }
-.teambio .closebtn{
+
+.teambio .closebtn {
     position: absolute;
     transform: rotate(45deg);
-    right:10px;
-    top:0px;
+    right: 10px;
+    top: 0px;
     font-size: 30px;
     padding: 0px;
     margin: 0px;
 }
-.teambio .closebtn:hover{
+
+.teambio .closebtn:hover {
     transform: scale(1.03) rotate(45deg);
-    outline: none!important;
+    outline: none !important;
     cursor: pointer;
 }
-.teambio img{
-    width: 30%;
+
+.teambio img {
+    width: 200px;
     margin: 10px;
     border-radius: 10px;
 }
-.teambio h2{
+.teambio h2 {
     position: relative;
-    left: 20px; 
+    left: 10px;
     top: 0px;
     margin: 0;
-    max-width: 25%;
+    max-width: 200px;
 }
-.teambio h3{
+
+.teambio h3 {
     position: relative;
-    left: 20px; 
+    left: 10px;
     top: 0px;
     margin: 0;
-    max-width: 25%;
+    max-width: 200px;
 }
+
 .teambio h4 {
     position: absolute;
-    left: 35%; 
+    left: 220px;
     top: 0px;
     right: 28px;
     height: 75vh;
@@ -440,22 +514,23 @@ hr {
     overflow-x: hidden;
     overflow-y: auto;
 }
-.teambio h4:after{
+.teambio a{
+    color: var(--color3)
+}
+
+.teambio h4:after {
     pointer-events: none;
-    content:"";
-    position: fixed; 
-    left: 35%;
+    content: "";
+    position: fixed;
+    left: 220px;
     right: 28px;
     top: 0px;
     bottom: 0px;
     box-shadow: inset -0px 20px 10px -10px var(--color1), inset 0px -20px 10px -10px var(--color1);
 }
-.teambio a{
-    position: relative;
-    left: 20px;
-    font-size: 0.9em;
-    color: var(--color3)
-}
+
+
+
 /*Divisions*/
 
 .flexitemdivis {
@@ -466,7 +541,9 @@ hr {
     background-color: var(--color1);
     padding: 5px;
 }
-.flexitemdivis h2, .flexitemdivis h3 {
+
+.flexitemdivis h2,
+.flexitemdivis h3 {
     color: var(--color1);
     text-align: center;
 }
@@ -486,51 +563,66 @@ hr {
     .topbar {
         height: 0px;
     }
+
     .topnav {
         opacity: 1 !important;
         visibility: visible !important;
-    }   
+    }
+
     .sidenav {
         transform: translate3d(-320px, 0px, 0px) !important;
-    }   
-    .sidenav .logo{
+    }
+
+    .sidenav .logo {
         padding: 20px;
         height: 55px;
         filter: drop-shadow(0 0 20px var(--color5));
     }
+
     .main {
         transform: translate3d(0px, 0px, 0px) !important;
         margin: 0px 0px 0px 300px;
-        padding-top: 10px
+        padding-top: 10px;
+        max-width: 768px;
+        position: absolute;
+        left: 50%;
+        margin-left: -384px!important;
     }
+
     .main.top {
         transform: translate3d(0px, 0px, 0px) !important;
         margin: 0px 0px 0px 0px;
         padding-top: 90px;
     }
+
     .main h1 {
-    font-size: 2.1em;
+        font-size: 2.1em;
     }
+
     .main h2 {
         font-size: 1.7em;
     }
+
     .main h3 {
         font-size: 1.3em;
     }
+
     .menubtn {
         display: none !important;
     }
-    .teambio{
-        height: 70vh; 
-        width: 60vw;
-        max-width: 80vw;
-        top: 20vh;
-        left: 20vw;
+    .flexitemteam {
+        width: 150px;
+        height: 320px;
     }
-    .flexcontainer img{
+    .teambio{
+        top: 90px;
+        height: calc(100vh - 110px);
+    }
+    .flexcontainer img {
         order: 0;
     }
-    .teambio h4{
+
+    .teambio h4 {
         height: 65vh;
     }
 }
