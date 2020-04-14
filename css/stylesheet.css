@@ -507,7 +507,7 @@ h4 {
     left: 10px;
     top: 280px;
     right: 10px;
-    height: calc(100vh - 385px);
+    height: calc(100vh - 370px);
     margin: 0;
     padding: 0px;
     overflow-x: hidden;
@@ -528,10 +528,7 @@ h4 {
     box-shadow: inset -0px 20px 10px -10px var(--color1), inset 0px -20px 10px -10px var(--color1);
 }
 @media only screen and (min-width:500px) {
-    .teambio{
-        top: 90px;
-        height: calc(100vh - 110px);
-    }
+
     .teambio h2,
     .teambio h3 {
         max-width: 200px;
@@ -638,8 +635,12 @@ h4 {
     .flexcontainer img {
         order: 0;
     }
-
+    .teambio{
+        top: 90px;
+        height: calc(100vh - 110px);
+    }
     .teambio h4 {
-        height: 65vh;
+        height: calc(100vh - 110px);
+
     }
 }
