@@ -451,7 +451,6 @@ h4 {
     position: fixed;
     left: 0px;
     right: 0px;
-
     z-index: 2;
     opacity: 1;
     height: calc(100vh - 90px);
@@ -505,10 +504,10 @@ h4 {
 
 .teambio h4 {
     position: absolute;
-    left: 220px;
-    top: 0px;
-    right: 28px;
-    height: 75vh;
+    left: 10px;
+    top: 280px;
+    right: 10px;
+    height: calc(100vh - 385px);
     margin: 0;
     padding: 2.5vh 0vh;
     overflow-x: hidden;
@@ -522,11 +521,29 @@ h4 {
     pointer-events: none;
     content: "";
     position: fixed;
-    left: 220px;
-    right: 28px;
-    top: 0px;
+    left: 10px;
+    right: 10px;
+    top: 280px;
     bottom: 0px;
     box-shadow: inset -0px 20px 10px -10px var(--color1), inset 0px -20px 10px -10px var(--color1);
+}
+@media only screen and (min-width:500px) {
+    .teambio{
+        top: 90px;
+        height: calc(100vh - 110px);
+    }
+    .teambio h4 {
+        left: 220px;
+        top: 0px;
+        right: 28px;
+        height: calc(100vh - 90px);
+    }
+    .teambio h4:after {
+        left: 220px;
+        right: 28px;
+        top: 0px;
+        bottom: 0px;
+    }
 }
 
 
@@ -613,10 +630,6 @@ h4 {
     .flexitemteam {
         width: 150px;
         height: 320px;
-    }
-    .teambio{
-        top: 90px;
-        height: calc(100vh - 110px);
     }
     .flexcontainer img {
         order: 0;
