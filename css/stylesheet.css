@@ -425,7 +425,9 @@ h4 {
     width: 150px;
     border-radius: 50%;
 }
-
+.flexitemteam h3 {
+    margin: 10px 0px;
+}
 .flexitemteam h4 {
     visibility: hidden;
     height: 0;
