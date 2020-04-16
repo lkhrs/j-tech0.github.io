@@ -16,7 +16,7 @@
     --color4: #61637A;    /*grey*/
     --color5: #293437;    /*dark grey-blue*/
     outline: none !important;
-
+    scroll-behavior: smooth;
 }
 
 /*between-page animations*/
@@ -52,6 +52,15 @@ html.is-animating hr {
 .clicktocloseoverlay.show {
     visibility: visible;
     opacity: 1;
+}
+:target {
+    animation: targetflash 1s ease;
+    border-radius: 5px;
+}
+@keyframes targetflash {
+    0% {background-color: none;}
+    50% {background-color: var(--color2);}
+    100% {background-color: none;}
 }
 
 /*
@@ -363,8 +372,8 @@ h3 {
 h4 {
     color: var(--color5);
     line-height: 1.1;
-    font-size: 1em;
-    font-weight: 400;
+    font-size: 0.8em;
+    font-weight: 300;
     margin: 10px 0px;
 }
 
