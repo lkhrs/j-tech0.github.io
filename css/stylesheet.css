@@ -515,6 +515,7 @@ h4 {
 
 .teambio h4 {
     position: absolute;
+    font-size: 1em;
     left: 10px;
     top: 280px;
     right: 10px;
