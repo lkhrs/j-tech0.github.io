@@ -657,3 +657,22 @@ h4 {
 
     }
 }
+/* Putting this stuff down here for now sorry */
+
+.landing {
+    display: flex;
+    width: 100%;
+    max-width: unset;
+    left: 0;
+    margin-left: unset !important;
+    background-color: #84bec8;
+}
+.landing h3 {
+    font-size: 2rem;
+}
+.landing-left {
+    max-width: 50%;
+}
+.landing-right {
+    max-width: 50%;
+}
