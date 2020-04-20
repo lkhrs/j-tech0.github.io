@@ -318,7 +318,7 @@ html.is-animating .toplinks a {
 body {
     /*body styling*/
     background-color: var(--color1);
-
+    margin: 0;
 }
 
 .main {
@@ -656,23 +656,75 @@ h4 {
         height: calc(100vh - 110px);
 
     }
+    /* Related to landing */
+    .landing-left {
+        width: 50%;
+        max-width: 50%;
+    }
+    .landing-right {
+        display: block !important;
+    }
 }
 /* Putting this stuff down here for now sorry */
 
 .landing {
     display: flex;
-    width: 100%;
     max-width: unset;
     left: 0;
     margin-left: unset !important;
-    background-color: #84bec8;
+    background-color: var(--color2);
+    height: 35rem;
+    flex-wrap: wrap;
+    padding-bottom: unset;
+    position: unset;
 }
 .landing h3 {
     font-size: 2rem;
 }
 .landing-left {
-    max-width: 50%;
+    width: 100%;
+    margin: auto auto;
+}
+.landing-buttons {
+    margin: 3rem 0;
+    width: 100%;
+}
+.landing-buttons a {
+    font-size: 1.5rem;
+    color: #fff !important;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--color3);
 }
 .landing-right {
     max-width: 50%;
+    min-width: 50%;
+    height: 100%;
+    margin: auto auto;
+    display:none;
+    margin-right: -20px;
+}
+.landing-right-inner {
+    background: no-repeat url(/media/images/landing/business.jpg);
+    height: 100%;
+    background-size: cover;
+}
+.landing-after {
+    padding: 3rem;
+    min-height: 35rem;
+    height: unset;
+    margin: unset;
+}
+.landing-block-one {
+    background-color: var(--color4);
+}
+.landing-block-one h3 {
+    color: var(--color1);
+}
+.landing-container {
+    max-width: 768px;
+    margin: auto auto;
+}
+.landing-block-two {
+    background-color: var(--color1);
 }
